@@ -4,8 +4,7 @@
 TEST A GAME: go test -v -race ./...
 
 RUN A GAME: 
-cd src ./start_psql.sh
-go run cmd/app/main.go
+cd src ./start_psql.sh && go run cmd/app/main.go
 
 register user: curl -X POST http://localhost:8080/user -H 'Content-Type: application/json' -d '{"login": "test_user_1", "password": "121212"}'
 
